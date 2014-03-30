@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Burger</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#" class="menu-button" id="menuButton">
+    <span class="burger-icon"></span>
+</a>
+
+<script>
+var menuButton = document.getElementById('menuButton');
+menuButton.addEventListener('click', function (e) {
+    menuButton.classList.toggle('is-active');
+    e.preventDefault();
+});
+</script>
+
+</body>
+</html>
