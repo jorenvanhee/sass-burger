@@ -129,6 +129,9 @@ body {
 }
 
 @include respond-to(500px) {
+	.Head {
+		margin-bottom: 3.5rem;
+	}
 	.Head-title {
 		font-size: 4.5rem;
 	}
