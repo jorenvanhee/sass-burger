@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "gulp-ruby-sass": "^0.4.1",
+    "gulp-livereload": "^1.2.0",
+    "gulp": "^3.6.0",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-plumber": "^0.5.6"
+  }
+}

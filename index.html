@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Sass Burger</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="Top">
+
+    <div class="Container">
+
+        <div class="u-textCenter">
+
+            <div class="Head">
+                <h1 class="Head-title">Sass Bur<span class="Head-title-g">g</span>er</h1>
+                <span class="Head-sub">100% vegan</span>
+            </div>
+
+        </div>
+
+        <div class="Circle" id="circle">
+            <div class="Burger-icon"></div>
+        </div>
+
+        <code class="Code"><pre><span class="c1">.burger-icon</span> {
+    <span class="c2">@include</span> burger(<span class="c3">25</span><span class="c1">px</span>, <span class="c3">3</span><span class="c1">px</span>, <span class="c3">5</span><span class="c1">px</span>, <span class="c3">#222</span>);
+}
+<span class="c1">.circle.is-active .burger-icon</span> {
+    <span class="c2">@include</span> burger-to-cross;
+}</pre></code>
+
+    </div>
+    
+</div>
+
+<div class="Bottom">
+
+    <div class="u-textCenter">
+        
+        <div class="u-inlineBlock">
+            
+            <a href="https://github.com/jorenvanhee/sass-burger" class="Button">Download on GitHub</a>
+
+            <!--<div class="Seperator"><span class="Seperator-text">and share it</span></div>
+
+            <a href="https://twitter.com/share" class="Button Button--tweet Button--small">Tweet</a>-->
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+var circle = document.getElementById('circle');
+circle.addEventListener('click', function (e) {
+    circle.classList.toggle('is-active');
+});
+</script>
+
+</body>
+</html>
