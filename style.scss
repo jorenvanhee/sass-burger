@@ -234,6 +234,15 @@ body {
    Buttons
 ============================================================================= */
 
+@keyframes buttonHover {
+	0% {
+		box-shadow: 0 0 1em rgba(#000, 0);
+	}
+	100% {
+		box-shadow: 0 0 1em rgba(#000, .15);
+	}
+}
+
 .Button {
 	display: inline-block;
 	padding: .8em 1.3em;
@@ -243,9 +252,15 @@ body {
 	color: #665828;
 	background-color: #fbe995;
 	border-radius: 3px;
+	transition: background-color .2s;
 
 	@include respond-to(500px) {
 		font-size: 1.125rem;
+	}
+
+	&:hover {
+		background-color: darken(#fbe995, 7.5%);
+		animation: buttonHover 1s infinite linear alternate;
 	}
 }
 .Button--small {
@@ -257,6 +272,11 @@ body {
 	color: #00b0ed;
 	background-color: #f5f9fb;
 	border: 1px solid rgba(#00b0ed, .5);
+	
+	&:hover {
+		background-color: darken(#f5f9fb, 2%);
+		animation: none;
+	}
 }
 
 
