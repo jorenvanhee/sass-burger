@@ -234,15 +234,6 @@ body {
    Buttons
 ============================================================================= */
 
-@keyframes buttonHover {
-	0% {
-		box-shadow: 0 0 1em rgba(#000, 0);
-	}
-	100% {
-		box-shadow: 0 0 1em rgba(#000, .15);
-	}
-}
-
 .Button {
 	display: inline-block;
 	padding: .8em 1.3em;
@@ -260,7 +251,6 @@ body {
 
 	&:hover {
 		background-color: darken(#fbe995, 7.5%);
-		animation: buttonHover 1s infinite linear alternate;
 	}
 }
 .Button--small {
