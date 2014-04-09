@@ -8,7 +8,7 @@
   "description": "A Sass mixin for creating hamburger icons.",
   "main": "_burger.scss",
   "ignore": [
-    "./(!_burger.scss)"
+    "README.md"
   ],
   "keywords": [
     "burger",
