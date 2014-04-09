@@ -1,0 +1,21 @@
+{
+  "name": "sass-burger",
+  "version": "1.0.0",
+  "homepage": "http://joren.co/sass-burger/",
+  "authors": [
+    "Joren Van Hee"
+  ],
+  "description": "A Sass mixin for creating hamburger icons.",
+  "main": "_burger.scss",
+  "ignore": [
+    "./!(_burger.scss)"
+  ],
+  "keywords": [
+    "burger",
+    "hamburger",
+    "navicon",
+    "icon",
+    "mixin",
+    "sass"
+  ]
+}
