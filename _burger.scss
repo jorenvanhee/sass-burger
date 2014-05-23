@@ -98,7 +98,6 @@
         -o-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
         transform: translateY($burger-gutter + $burger-height) rotate(45deg);
     }
-
     &:after {
         -webkit-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
         -moz-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
