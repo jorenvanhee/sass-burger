@@ -27,7 +27,15 @@
         @if $border-radius != 0 {
             border-radius: $border-radius;
         }
+        
+        -webkit-transition-property: background-color transform;
+        -moz-transition-property: background-color transform;
+        -o-transition-property: background-color transform;
         transition-property: background-color transform;
+
+        -webkit-transition-duration: $transition-duration;
+        -moz-transition-duration: $transition-duration;
+        -o-transition-duration: $transition-duration;
         transition-duration: $transition-duration;
     }
 
@@ -84,9 +92,18 @@
         background-color: transparent;
     }
     &:before {
+        -webkit-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+        -moz-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+        -ms-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+        -o-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
         transform: translateY($burger-gutter + $burger-height) rotate(45deg);
     }
+
     &:after {
+        -webkit-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        -moz-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        -ms-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        -o-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
         transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
     }
 }
