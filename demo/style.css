@@ -31,10 +31,10 @@
   width: 25px;
   height: 3px;
   background-color: #444444;
-  -webkit-transition-property: background-color transform;
-  -moz-transition-property: background-color transform;
-  -o-transition-property: background-color transform;
-  transition-property: background-color transform;
+  -webkit-transition-property: background-color, -webkit-transform;
+  -moz-transition-property: background-color, -moz-transform;
+  -o-transition-property: background-color, -o-transform;
+  transition-property: background-color, transform;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
