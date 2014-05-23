@@ -31,9 +31,13 @@
   width: 25px;
   height: 3px;
   background-color: #444444;
-  -webkit-transition-property: background-color -webkit-transform;
+  -webkit-transition-property: background-color transform;
+  -moz-transition-property: background-color transform;
+  -o-transition-property: background-color transform;
   transition-property: background-color transform;
   -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
 .burger-icon:before, .burger-icon:after {
@@ -52,11 +56,15 @@
 }
 .menu-button.is-active .burger-icon:before {
   -webkit-transform: translateY(8px) rotate(45deg);
+  -moz-transform: translateY(8px) rotate(45deg);
   -ms-transform: translateY(8px) rotate(45deg);
+  -o-transform: translateY(8px) rotate(45deg);
   transform: translateY(8px) rotate(45deg);
 }
 .menu-button.is-active .burger-icon:after {
   -webkit-transform: translateY(-8px) rotate(-45deg);
+  -moz-transform: translateY(-8px) rotate(-45deg);
   -ms-transform: translateY(-8px) rotate(-45deg);
+  -o-transform: translateY(-8px) rotate(-45deg);
   transform: translateY(-8px) rotate(-45deg);
 }
