@@ -18,3 +18,7 @@ _Requires Sass 3.3.0 or higher._
 ## Usage
 
 Take a look at the demo and the burger.scss file, it should be pretty self-explanatory.
+
+## License
+
+MIT [http://joren.mit-license.org/](http://joren.mit-license.org/)
