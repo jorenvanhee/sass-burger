@@ -11,9 +11,12 @@
  * Burger
  */
 
+$burger-height: 5px !default ;
+$burger-gutter: 3px !default;
+
 @mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 0, $transition-duration: .3s) {
-    $burger-height: $height !global;
-    $burger-gutter: $gutter !global;
+    $burger-height: $height;
+    $burger-gutter: $gutter;
 
     position: relative;
     margin-top: $height + $gutter;
