@@ -1,16 +1,11 @@
-/**
- * Burger parts
- *
- * (---) top    -> &:before
- * [---] middle -> &
- * (---) bottom -> &:after
- */
+// Burger parts
+//
+// (---) top    -> &:before
+// [---] middle -> &
+// (---) bottom -> &:after
 
 
-/**
- * Burger
- */
-
+// Burger
 @mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 0, $transition-duration: .3s) {
     $burger-height: $height !global;
     $burger-gutter: $gutter !global;
@@ -27,7 +22,7 @@
         @if $border-radius != 0 {
             border-radius: $border-radius;
         }
-        
+
         -webkit-transition-property: background-color, -webkit-transform;
         -moz-transition-property: background-color, -moz-transform;
         -o-transition-property: background-color, -o-transform;
@@ -54,10 +49,7 @@
 }
 
 
-/**
- * Select parts of the burger
- */
-
+// Select parts of the burger
 @mixin burger-parts {
     &, &:before, &:after {
         @content;
@@ -83,10 +75,7 @@
 }
 
 
-/**
- * Burger animations
- */
-
+// Burger animations
 @mixin burger-to-cross {
     & {
         background-color: transparent;
