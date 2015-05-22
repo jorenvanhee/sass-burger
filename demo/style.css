@@ -7,7 +7,11 @@
 .burger-icon {
   position: relative;
   margin-top: 8px;
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   .burger-icon, .burger-icon:before, .burger-icon:after {
     display: block;
     width: 25px;
@@ -31,12 +35,14 @@
 
 .menu-button.is-active .burger-icon {
   background-color: transparent; }
+
 .menu-button.is-active .burger-icon:before {
   -webkit-transform: translateY(8px) rotate(45deg);
   -moz-transform: translateY(8px) rotate(45deg);
   -ms-transform: translateY(8px) rotate(45deg);
   -o-transform: translateY(8px) rotate(45deg);
   transform: translateY(8px) rotate(45deg); }
+
 .menu-button.is-active .burger-icon:after {
   -webkit-transform: translateY(-8px) rotate(-45deg);
   -moz-transform: translateY(-8px) rotate(-45deg);
