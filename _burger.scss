@@ -14,6 +14,11 @@
     margin-top: $height + $gutter;
     margin-bottom: $height + $gutter;
 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
     &, &:before, &:after {
         display: block;
         width: $width;
@@ -32,11 +37,6 @@
         -moz-transition-duration: $transition-duration;
         -o-transition-duration: $transition-duration;
         transition-duration: $transition-duration;
-
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
     }
 
     &:before, &:after {
