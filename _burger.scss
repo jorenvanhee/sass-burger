@@ -9,9 +9,9 @@
  * Burger
  */
 
-$sass-burger-add-transition-vendor-prefixes: true !default;
+$sass-burger-add-vendor-prefixes: true !default;
 
-@mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 0, $transition-duration: .3s, $add-vendor-prefixes: $sass-burger-add-transition-vendor-prefixes) {
+@mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 0, $transition-duration: .3s, $add-vendor-prefixes: $sass-burger-add-vendor-prefixes) {
     $burger-height: $height !global;
     $burger-gutter: $gutter !global;
 
@@ -19,9 +19,11 @@ $sass-burger-add-transition-vendor-prefixes: true !default;
     margin-top: $height + $gutter;
     margin-bottom: $height + $gutter;
 
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    @if $add-vendor-prefixes {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
     user-select: none;
 
     &, &:before, &:after {
@@ -90,7 +92,7 @@ $sass-burger-add-transition-vendor-prefixes: true !default;
 
 
 // Burger animations
-@mixin burger-to-cross {
+@mixin burger-to-cross($add-vendor-prefixes: $sass-burger-add-vendor-prefixes) {
     & {
         background-color: transparent;
     }
