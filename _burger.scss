@@ -11,7 +11,7 @@
 
 $sass-burger-add-vendor-prefixes: true !default;
 
-@mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 0, $transition-duration: .3s, $add-vendor-prefixes: $sass-burger-add-vendor-prefixes) {
+@mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 0, $transition-duration: .3s) {
     $burger-height: $height !global;
     $burger-gutter: $gutter !global;
 
@@ -19,7 +19,7 @@ $sass-burger-add-vendor-prefixes: true !default;
     margin-top: $height + $gutter;
     margin-bottom: $height + $gutter;
 
-    @if $add-vendor-prefixes {
+    @if $sass-burger-add-vendor-prefixes {
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
@@ -35,14 +35,14 @@ $sass-burger-add-vendor-prefixes: true !default;
             border-radius: $border-radius;
         }
 
-        @if $add-vendor-prefixes {
+        @if $sass-burger-add-vendor-prefixes {
             -webkit-transition-property: background-color, -webkit-transform;
             -moz-transition-property: background-color, -moz-transform;
             -o-transition-property: background-color, -o-transform;
         }
         transition-property: background-color, transform;
 
-        @if $add-vendor-prefixes {
+        @if $sass-burger-add-vendor-prefixes {
             -webkit-transition-duration: $transition-duration;
             -moz-transition-duration: $transition-duration;
             -o-transition-duration: $transition-duration;
@@ -92,12 +92,12 @@ $sass-burger-add-vendor-prefixes: true !default;
 
 
 // Burger animations
-@mixin burger-to-cross($add-vendor-prefixes: $sass-burger-add-vendor-prefixes) {
+@mixin burger-to-cross() {
     & {
         background-color: transparent;
     }
     &:before {
-        @if $add-vendor-prefixes {
+        @if $sass-burger-add-vendor-prefixes {
             -webkit-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
             -moz-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
             -ms-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
@@ -106,7 +106,7 @@ $sass-burger-add-vendor-prefixes: true !default;
         transform: translateY($burger-gutter + $burger-height) rotate(45deg);
     }
     &:after {
-        @if $add-vendor-prefixes {
+        @if $sass-burger-add-vendor-prefixes {
             -webkit-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
             -moz-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
             -ms-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
