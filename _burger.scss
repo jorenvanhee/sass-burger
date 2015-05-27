@@ -5,6 +5,9 @@
 // (---) bottom -> &:after
 
 
+// Vendor prefixes
+$sass-burger-add-vendor-prefixes: true !default;
+
 // Burger
 @mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 0, $transition-duration: .3s) {
     $burger-height: $height !global;
@@ -14,9 +17,11 @@
     margin-top: $height + $gutter;
     margin-bottom: $height + $gutter;
 
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    @if $sass-burger-add-vendor-prefixes {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
     user-select: none;
 
     &, &:before, &:after {
@@ -28,14 +33,18 @@
             border-radius: $border-radius;
         }
 
-        -webkit-transition-property: background-color, -webkit-transform;
-        -moz-transition-property: background-color, -moz-transform;
-        -o-transition-property: background-color, -o-transform;
+        @if $sass-burger-add-vendor-prefixes {
+            -webkit-transition-property: background-color, -webkit-transform;
+            -moz-transition-property: background-color, -moz-transform;
+            -o-transition-property: background-color, -o-transform;
+        }
         transition-property: background-color, transform;
 
-        -webkit-transition-duration: $transition-duration;
-        -moz-transition-duration: $transition-duration;
-        -o-transition-duration: $transition-duration;
+        @if $sass-burger-add-vendor-prefixes {
+            -webkit-transition-duration: $transition-duration;
+            -moz-transition-duration: $transition-duration;
+            -o-transition-duration: $transition-duration;
+        }
         transition-duration: $transition-duration;
     }
 
@@ -86,17 +95,21 @@
         background-color: transparent;
     }
     &:before {
-        -webkit-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
-        -moz-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
-        -ms-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
-        -o-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+        @if $sass-burger-add-vendor-prefixes {
+            -webkit-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+            -moz-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+            -ms-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+            -o-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+        }
         transform: translateY($burger-gutter + $burger-height) rotate(45deg);
     }
     &:after {
-        -webkit-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
-        -moz-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
-        -ms-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
-        -o-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        @if $sass-burger-add-vendor-prefixes {
+            -webkit-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+            -moz-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+            -ms-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+            -o-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        }
         transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
     }
 }
