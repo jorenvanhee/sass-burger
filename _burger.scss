@@ -90,7 +90,7 @@ $sass-burger-add-vendor-prefixes: true !default;
 
 
 // Burger animations
-@mixin burger-to-cross() {
+@mixin burger-to-cross {
     & {
         background-color: transparent;
     }
