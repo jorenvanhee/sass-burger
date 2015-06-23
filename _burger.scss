@@ -29,6 +29,7 @@ $sass-burger-add-vendor-prefixes: true !default;
         width: $width;
         height: $height;
         background-color: $color;
+        will-change: transform;
         @if $border-radius != 0 {
             border-radius: $border-radius;
         }
