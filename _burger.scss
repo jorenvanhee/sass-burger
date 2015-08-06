@@ -25,7 +25,7 @@ $sass-burger-add-vendor-prefixes: true !default;
     user-select: none;
 
     &, &:before, &:after {
-        display: block;
+        display: inline-block;
         width: $width;
         height: $height;
         background-color: $color;
@@ -55,10 +55,12 @@ $sass-burger-add-vendor-prefixes: true !default;
 
     &:before {
         top: -($height + $gutter);
+        left: 0;
     }
 
     &:after {
         top: $height + $gutter;
+        left: 0;
     }
 }
 
