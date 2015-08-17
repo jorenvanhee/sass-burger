@@ -1,8 +1,8 @@
 // Burger parts
 //
-// (---) top    -> &:before
+// (---) top    -> &::before
 // [---] middle -> &
-// (---) bottom -> &:after
+// (---) bottom -> &::after
 
 
 // Vendor prefixes
@@ -24,7 +24,7 @@ $sass-burger-add-vendor-prefixes: true !default;
     }
     user-select: none;
 
-    &, &:before, &:after {
+    &, &::before, &::after {
         display: block;
         width: $width;
         height: $height;
@@ -48,16 +48,16 @@ $sass-burger-add-vendor-prefixes: true !default;
         transition-duration: $transition-duration;
     }
 
-    &:before, &:after {
+    &::before, &::after {
         position: absolute;
         content: "";
     }
 
-    &:before {
+    &::before {
         top: -($height + $gutter);
     }
 
-    &:after {
+    &::after {
         top: $height + $gutter;
     }
 }
@@ -65,13 +65,13 @@ $sass-burger-add-vendor-prefixes: true !default;
 
 // Select parts of the burger
 @mixin burger-parts {
-    &, &:before, &:after {
+    &, &::before, &::after {
         @content;
     }
 }
 
 @mixin burger-top {
-    &:before {
+    &::before {
         @content;
     }
 }
@@ -83,7 +83,7 @@ $sass-burger-add-vendor-prefixes: true !default;
 }
 
 @mixin burger-bottom {
-    &:after {
+    &::after {
         @content;
     }
 }
@@ -94,7 +94,7 @@ $sass-burger-add-vendor-prefixes: true !default;
     & {
         background-color: transparent;
     }
-    &:before {
+    &::before {
         @if $sass-burger-add-vendor-prefixes {
             -webkit-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
             -moz-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
@@ -103,7 +103,7 @@ $sass-burger-add-vendor-prefixes: true !default;
         }
         transform: translateY($burger-gutter + $burger-height) rotate(45deg);
     }
-    &:after {
+    &::after {
         @if $sass-burger-add-vendor-prefixes {
             -webkit-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
             -moz-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
