@@ -12,7 +12,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  .burger-icon, .burger-icon:before, .burger-icon:after {
+  .burger-icon, .burger-icon::before, .burger-icon::after {
     display: block;
     width: 25px;
     height: 3px;
@@ -25,25 +25,25 @@
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
     transition-duration: 0.3s; }
-  .burger-icon:before, .burger-icon:after {
+  .burger-icon::before, .burger-icon::after {
     position: absolute;
     content: ""; }
-  .burger-icon:before {
+  .burger-icon::before {
     top: -8px; }
-  .burger-icon:after {
+  .burger-icon::after {
     top: 8px; }
 
 .menu-button.is-active .burger-icon {
   background-color: transparent; }
 
-.menu-button.is-active .burger-icon:before {
+.menu-button.is-active .burger-icon::before {
   -webkit-transform: translateY(8px) rotate(45deg);
   -moz-transform: translateY(8px) rotate(45deg);
   -ms-transform: translateY(8px) rotate(45deg);
   -o-transform: translateY(8px) rotate(45deg);
   transform: translateY(8px) rotate(45deg); }
 
-.menu-button.is-active .burger-icon:after {
+.menu-button.is-active .burger-icon::after {
   -webkit-transform: translateY(-8px) rotate(-45deg);
   -moz-transform: translateY(-8px) rotate(-45deg);
   -ms-transform: translateY(-8px) rotate(-45deg);
