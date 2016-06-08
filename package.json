@@ -1,0 +1,24 @@
+{
+  "name": "sass-burger",
+  "version": "1.3.0",
+  "description": "A Sass mixin for creating hamburger icons.",
+  "main": "_burger.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jorenvanhee/sass-burger.git"
+  },
+  "keywords": [
+    "burger",
+    "hamburger",
+    "navicon",
+    "icon",
+    "mixin",
+    "sass"
+  ],
+  "author": "Joren Van Hee <jorenvanhee@gmail.com> (http://joren.co)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jorenvanhee/sass-burger/issues"
+  },
+  "homepage": "http://joren.co/sass-burger/"
+}
