@@ -7,7 +7,7 @@ A Sass mixin for creating hamburger icons.
 
 ## Install
 
-Download the [_burger.scss file](_burger.scss) manually, or use a package manager.
+Download the [_burger.scss](_burger.scss) file manually, or use a package manager.
 
 ```
 npm install --save sass-burger
@@ -25,7 +25,7 @@ _Requires Sass 3.3.0 or higher._
 
 ## Usage
 
-Take a look at the demo and the burger.scss file, it should be pretty self-explanatory.
+Take a look at the [example](demo/) and the [_burger.scss](_burger.scss) file, it should be pretty self-explanatory.
 
 ## Less
 
