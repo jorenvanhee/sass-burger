@@ -17,6 +17,7 @@
     width: 25px;
     height: 3px;
     background-color: #444;
+    outline: 1px solid transparent;
     -webkit-transition-property: background-color, -webkit-transform;
     -moz-transition-property: background-color, -moz-transform;
     -o-transition-property: background-color, -o-transform;
